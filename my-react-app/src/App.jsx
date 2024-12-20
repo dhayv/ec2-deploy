@@ -1,33 +1,48 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
+function getDate() {
+  const today = new Date();
+  const month = today.getMonth() + 1;
+  const year = today.getFullYear();
+  const date = today.getDate();
+  return `${month}/${date}/${year}`;
+}
+
+function getTime(){
+  return new Date().toLocaleTimeString();
+}
 function App() {
   const [count, setCount] = useState(0)
+  const [currentDate, setCurrentDate] = useState(getDate())
+  const [currentTime, setCurrentTime] = useState(getTime());
+  
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <div className='container'>
+      
+      <h1>AWS CI/CD Pipeline Demo</h1>
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+            <h2>Live Time</h2>
+            <p className="text-xl">{currentTime}</p>
+          </div>
+          
+          <div>
+            <h2>Today's Date</h2>
+            <p className="text-xl">{currentDate}</p>
+          </div>
+
+          <p>
+            Simple demonstration of AWS CI/CD pipeline using Vite + React.
+          </p>
+          </div>
+        
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
+
     </>
   )
 }
