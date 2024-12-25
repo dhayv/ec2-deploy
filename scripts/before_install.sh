@@ -1,8 +1,8 @@
 #!/bin/bash
 # Update system
-sudo apt update 
+sudo apt update -y
 
-# Enable and install nginx from amazon-linux-extras
+# Enable and install nginx 
 sudo apt-get install nginx -y
 
 # Start and enable nginx
@@ -21,4 +21,4 @@ sudo ./install auto
 sudo systemctl status codedeploy-agent
 
 # Clean previous deployment
-rm -rf /var/www/html/*
+sudo rm -rf /var/www/html/*
