@@ -1,5 +1,5 @@
-#!/bin/bash
-sudo cat > cd /etc/nginx/sites-enabled/default << 'EOF'
+# Use a temporary file to store the content
+sudo tee /etc/nginx/sites-enabled/default > /dev/null << 'EOF'
 server {
     listen 80;
     server_name _;
@@ -14,4 +14,4 @@ server {
 EOF
 
 # Restart nginx
-sudo systemctl restart nginx
+sudo systemctl daemon-reload
