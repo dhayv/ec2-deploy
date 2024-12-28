@@ -5,6 +5,7 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
+        - cd ./my-react-app
         - npm install
        
   build:
@@ -16,5 +17,5 @@ artifacts:
     - '**/*'
     - appspec.yml
     - scripts/**/*
-  base-directory: '.'
+  base-directory: './my-react-app/dist'
   discard-paths: no
