@@ -17,5 +17,5 @@ artifacts:
     - '**/*'
     - '../appspec.yml'
     - '../scripts/**/*'
-  base-directory: './dist'
+  base-directory: './my-react-app/dist'
   discard-paths: no
