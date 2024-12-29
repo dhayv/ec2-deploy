@@ -15,7 +15,7 @@ phases:
 artifacts:
   files:
     - '**/*'
-    - appspec.yml
-    - scripts/**/*
-  base-directory: './my-react-app/dist'
+    - '../appspec.yml'
+    - '../scripts/**/*'
+  base-directory: './dist'
   discard-paths: no
