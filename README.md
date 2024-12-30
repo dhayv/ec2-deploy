@@ -1,6 +1,6 @@
 # AWS CI/CD Pipeline with CodePipeline, CodeBuild, and CodeDeploy
 
-This repository demonstrates a fully automated deployment pipeline for a React application using AWS services. The pipeline automatically detects changes in your GitHub repository, builds the application, and deploys it to EC2 instances—eliminating the need for manual SSH deployments.
+This repository serves as both a demonstration and the companion code for my detailed tutorial blog post on setting up a fully automated CI/CD pipeline using AWS services. You can follow along with the blog post for step-by-step instructions or use this repository as a reference implementation.
 
 [Link to Blog Post ](https://dev.to/dhayv/ec2-cicd-pipeline-using-aws-codepipeline-codebuild-codedeploy-1p21)
 ## Architecture
